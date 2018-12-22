@@ -106,6 +106,7 @@
     <Content Include="Scripts\umd\popper-utils.min.js" />
     <Content Include="Scripts\umd\popper.js" />
     <Content Include="Scripts\umd\popper.min.js" />
+    <Content Include="Views\Home\RsvpForm.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\README.md" />

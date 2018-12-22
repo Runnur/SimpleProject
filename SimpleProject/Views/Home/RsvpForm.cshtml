@@ -1,0 +1,17 @@
+﻿@model SimpleProject.Models.GuestResponse
+
+@{
+    ViewBag.Title = "RsvpForm";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>RSVP Form</h2>
+<div>
+    @using (Html.BeginForm())
+    {
+        <p>Your name: @Html.TextBoxFor(x => x.Name)</p>
+        <p>Your email: @Html.TextBoxFor(x => x.Email)</p>
+        <p>Your phone: @Html.TextBoxFor(x => x.Phone)</p>
+    } 
+</div>
+
