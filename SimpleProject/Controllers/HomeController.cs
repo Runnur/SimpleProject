@@ -17,6 +17,15 @@ namespace SimpleProject.Controllers
             ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
             ViewData["Runtime"] = isMono ? "Mono" : ".NET";
 
+            int hour = DateTime.Now.Hour;
+            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+
+
+            return View();
+        }
+
+        public  ViewResult RsvpForm()
+        {
             return View();
         }
     }
