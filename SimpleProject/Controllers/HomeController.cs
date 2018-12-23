@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
+using System.Web.Mvc.Html;
+using SimpleProject.Models;
 
 namespace SimpleProject.Controllers
 {
@@ -23,10 +25,23 @@ namespace SimpleProject.Controllers
 
             return View();
         }
-
+        [HttpGet]
         public  ViewResult RsvpForm()
         {
             return View();
+        }
+
+        [HttpPost]
+        public ViewResult RsvpForm(GuestResponse guestResponse)
+        {
+            if (ModelState.IsValid)
+            {
+                return View("Thanks", guestResponse);
+            }
+            else
+            {
+                return View();
+            }
         }
     }
 }
