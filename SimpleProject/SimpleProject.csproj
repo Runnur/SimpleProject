@@ -62,6 +62,9 @@
     <Reference Include="Build.Mvc5">
       <HintPath>..\packages\Build.Mvc5.2014.5.26.0\lib\net45\Build.Mvc5.dll</HintPath>
     </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
