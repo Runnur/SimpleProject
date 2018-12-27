@@ -27,6 +27,9 @@ namespace SimpleProject.Controllers
 	//Строк 1.3 созданная в ветке MyLocalBrunch
 	//Строк 1.4 созданная в ветке MyLocalBrunch
 
+	//Строка 1.5 созданная в ветке master
+
+
         public ActionResult Index()
         {
             var mvcName = typeof(Controller).Assembly.GetName();
