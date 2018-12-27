@@ -11,6 +11,28 @@ namespace SimpleProject.Controllers
 {
     public class HomeController : Controller
     {
+	//Строка созданная в ветке NewTestMaster
+
+	//Строка созданная в ветке master
+
+	//Новая строка созданная в ветке NewTestMaster
+
+
+	//Новая строка созданная в ветке master
+
+	//Строка 1.1 созданная в ветке master
+
+	//Строка 1.2 созданная в ветке master
+
+	//Строк 1.3 созданная в ветке MyLocalBrunch
+	//Строк 1.4 созданная в ветке MyLocalBrunch
+
+	//Строка 1.5 созданная в ветке master
+	//Строка 1.6 созданная в ветке MyLocalBrunch
+	//Строка 1.7 созданная в ветке master
+	//Строка 1.8 созданная в ветке MyLocalBrunch
+
+
         public ActionResult Index()
         {
             var mvcName = typeof(Controller).Assembly.GetName();
@@ -30,6 +52,12 @@ namespace SimpleProject.Controllers
         {
             return View();
         }
+	
+	[HttpGet]
+	public string TestMethod()
+	{
+		return @"Строка созданная в мастере";
+	}
 
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
