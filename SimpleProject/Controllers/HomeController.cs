@@ -30,6 +30,12 @@ namespace SimpleProject.Controllers
         {
             return View();
         }
+	
+	[HttpGet]
+	public string TestMethod()
+	{
+		return @"Строка созданная в мастере";
+	}
 
         [HttpPost]
         public ViewResult RsvpForm(GuestResponse guestResponse)
