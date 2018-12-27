@@ -15,6 +15,8 @@ namespace SimpleProject.Controllers
 
 	//Строка созданная в ветке master
 
+	//Новая строка созданная в ветке NewTestMaster
+
 
 	//Новая строка созданная в ветке master
 
