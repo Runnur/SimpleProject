@@ -15,6 +15,8 @@ namespace SimpleProject.Controllers
 
 	//Строка созданная в ветке master
 
+	//Новая строка созданная в ветке NewTestMaster
+
         public ActionResult Index()
         {
             var mvcName = typeof(Controller).Assembly.GetName();
