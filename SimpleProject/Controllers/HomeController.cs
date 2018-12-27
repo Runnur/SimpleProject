@@ -32,7 +32,8 @@ namespace SimpleProject.Controllers
 	//Строка 1.7 созданная в ветке master
 	//Строка 1.8 созданная в ветке MyLocalBrunch
 	//Строка 1.9 созданная в ветке master
-
+	//Строка 1.10 созданная в ветке master
+	
 
         public ActionResult Index()
         {
