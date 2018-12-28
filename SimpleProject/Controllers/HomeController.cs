@@ -37,6 +37,7 @@ namespace SimpleProject.Controllers
 	//Строка 1.12 созданная в ветке master
 	//Строка 1.13 созданная в ветке MyLocalBranch
 	//Строка 1.14 созданная в ветке master
+	//Строка 1.15 созданная в ветке LocalMasterBranch
 
         public ActionResult Index()
         {
