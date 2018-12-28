@@ -11,18 +11,7 @@ namespace SimpleProject.Controllers
 {
     public class HomeController : Controller
     {
-	//Строка созданная в ветке NewTestMaster
 
-	//Строка созданная в ветке master
-
-	//Новая строка созданная в ветке NewTestMaster
-
-
-	//Новая строка созданная в ветке master
-
-	//Строка 1.1 созданная в ветке master
-
-	//Строка 1.2 созданная в ветке master
 
 	//Строк 1.3 созданная в ветке MyLocalBranch
 	//Строк 1.4 созданная в ветке MyLocalBranch
@@ -38,6 +27,8 @@ namespace SimpleProject.Controllers
 	//Строка 1.13 созданная в ветке MyLocalBranch
 	//Строка 1.14 созданная в ветке master
 	//Строка 1.15 созданная в ветке LocalMasterBranch
+
+//Строка 1.16 созданная в ветке master
 
         public ActionResult Index()
         {
