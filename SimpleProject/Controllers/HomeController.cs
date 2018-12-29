@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using SimpleProject.Models;
+using Ninject;
 
 namespace SimpleProject.Controllers
 {
@@ -51,10 +52,14 @@ namespace SimpleProject.Controllers
         int hour = DateTime.Now.Hour;
         ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
 
-        LinqValueCalculator calc = new LinqValueCalculator();
+        IKernel ninjectKernel = new StandartKernel();
+        ninjectKernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
+        IValueCalculator calc = ninjectKernel.Get<IValueCalculator>();
+        //ILinqValueCalculator calc = new LinqValueCalculator();
         ShoppingCart cart = new ShoppingCart(calc) { Products = products };
         decimal totalValue = cart.CalculateProductTotal();
-        ViewBag.TotalValue = totalValue.ToString();
+        ViewBag.TotalValue = totalValue.ToString();        
+
         return View();
     }
 
