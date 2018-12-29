@@ -1,5 +1,12 @@
-﻿<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
+﻿@model decimal
+@{
+    Layout = null;
+}
+<h2>Welcome to ASP.NET MVC @ViewData["Version"] on @ViewData["Runtime"]!</h2>
 <h2>Second header text</h2>
 <div>
     @Html.ActionLink("RSVP Now", "RsvpForm")
+</div>
+<div>
+    Total value is @ViewBag.TotalValue
 </div>
