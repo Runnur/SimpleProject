@@ -11,6 +11,12 @@ namespace SimpleProject.Controllers
 {
     public class HomeController : Controller
     {
+        private Product[] products = {
+                                         new Product (Name = "Kayak", Category = "Watersports", Price = 275M),
+                                         new Product (Name = "Lifejacket", Category = "Watersports", Price = 48.95M),
+                                         new Product (Name = "Soccer ball", Category = "Soccer", Price = 17.95M),
+                                         new Product (Name = "Corner flag", Category = "Soccer", Price = 34.95M),
+                                     };
 
 
 	//Строк 1.3 созданная в ветке MyLocalBranch
@@ -28,29 +34,36 @@ namespace SimpleProject.Controllers
 	//Строка 1.14 созданная в ветке master
 	//Строка 1.15 созданная в ветке LocalMasterBranch
 
-//Строка 1.16 созданная в ветке master
+    //Строка 1.16 созданная в ветке master
 
-//Строка 1.17 созданная в ветке LocalMasterBranch
+    //Строка 1.17 созданная в ветке LocalMasterBranch
 
-        public ActionResult Index()
-        {
-            var mvcName = typeof(Controller).Assembly.GetName();
-            var isMono = Type.GetType("Mono.Runtime") != null;
-
-            ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
-            ViewData["Runtime"] = isMono ? "Mono" : ".NET";
-
-            int hour = DateTime.Now.Hour;
-            ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+    public ActionResult Index()
+    {
 
 
-            return View();
-        }
-        [HttpGet]
-        public  ViewResult RsvpForm()
-        {
-            return View();
-        }
+        var mvcName = typeof(Controller).Assembly.GetName();
+        var isMono = Type.GetType("Mono.Runtime") != null;
+
+        ViewData["Version"] = mvcName.Version.Major + "." + mvcName.Version.Minor;
+        ViewData["Runtime"] = isMono ? "Mono" : ".NET";
+
+        int hour = DateTime.Now.Hour;
+        ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
+
+        LinqValueCalculator calc = new LinqValueCalculator();
+        ShoppingCart cart = new ShoppingCart(calc) { Products = products };
+        decimal totalValue = cart.CalculateProductTotal();
+        ViewBag.TotalValue = totalValue.ToString();
+        return View();
+    }
+
+
+    [HttpGet]
+    public  ViewResult RsvpForm()
+    {
+        return View();
+    }
 	
 	[HttpGet]
 	public string TestMethod()
