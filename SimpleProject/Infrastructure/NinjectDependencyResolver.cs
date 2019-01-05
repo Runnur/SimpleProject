@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
 using System.Web.Mvc;
-using Moq;
 using Ninject;
-//using GameStore.Domain.Abstract;
+using Ninject.Parameters;
+using Ninject.Syntax;
+using System.Configuration;
 
 
 namespace SimpleProject.Infrastructure

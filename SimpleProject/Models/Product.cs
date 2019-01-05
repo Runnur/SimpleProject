@@ -1,3 +1,5 @@
+using System;
+
 namespace SimpleProject.Models
 {
     public class Product
@@ -8,10 +10,12 @@ namespace SimpleProject.Models
         public decimal Price { get; set; }
         public string Category { get; set; }
     
-        public Product()
-        {
-
-        }
+        //public Product(string name, string category, decimal price)
+        //{
+        //    Name = name;
+        //    Category = category;
+        //    Price = price;
+        //}
     }
 
 

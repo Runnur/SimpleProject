@@ -1,10 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+
 namespace SimpleProject.Models
 {
-    public class ILinqValueCalculator
+    public interface ILinqValueCalculator
     {
-        public ILinqValueCalculator()
-        {
-        }
+        decimal ValueProducts(IEnumerable<Product> products);
+
     }
 }

@@ -5,10 +5,10 @@ namespace SimpleProject.Models
 {
     public class ShoppingCart
     {
-        private ILinqValueCalculator calc;
+        private IValueCalculator calc;
 
 
-        public ShoppingCart(ILinqValueCalculator calcParam)
+        public ShoppingCart(IValueCalculator calcParam)
         {
             calc = calcParam;
         }
