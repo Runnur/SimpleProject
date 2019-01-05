@@ -4,6 +4,8 @@ using System.Configuration;
 using System.Web.Mvc;
 using Moq;
 using Ninject;
+//using GameStore.Domain.Abstract;
+
 
 namespace SimpleProject.Infrastructure
 {
@@ -29,7 +31,7 @@ namespace SimpleProject.Infrastructure
 
         private void AddBindings()
         {
-
+            //Mock<IGame
         }
     }
 }
