@@ -1,4 +1,3 @@
-﻿using System;
 namespace SimpleProject.Models
 {
     public class Product
@@ -8,8 +7,5 @@ namespace SimpleProject.Models
         public string Description { get; set; }
         public decimal Price { get; set; }
         public string Category { get; set; }
-        public Product()
-        {
-        }
     }
 }

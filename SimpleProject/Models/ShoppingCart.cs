@@ -5,9 +5,10 @@ namespace SimpleProject.Models
 {
     public class ShoppingCart
     {
-        private LinqValueCalculator calc;
+        private ILinqValueCalculator calc;
 
-        public ShoppingCart(LinqValueCalculator calcParam)
+
+        public ShoppingCart(ILinqValueCalculator calcParam)
         {
             calc = calcParam;
         }
@@ -17,9 +18,6 @@ namespace SimpleProject.Models
         public decimal CalculateProductTotal()
         {
             return calc.ValueProducts(Products);
-        }
-        public ShoppingCart()
-        {
         }
     }
 }
