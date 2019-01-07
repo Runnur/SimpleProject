@@ -19,6 +19,12 @@ namespace SimpleProject.Infrastructure
             AddBindings();
         }
 
+        public NinjectDependencyResolver()
+        {
+            kernel = new StandardKernel();
+            AddBindings();
+        }
+
         public object GetService(Type serviceType)
         {
             return kernel.TryGet(serviceType);
@@ -32,6 +38,7 @@ namespace SimpleProject.Infrastructure
         private void AddBindings()
         {
             //Mock<IGame
+            kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
         }
     }
 }
