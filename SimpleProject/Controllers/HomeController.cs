@@ -7,6 +7,7 @@ using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using SimpleProject.Models;
 using Ninject;
+using MySql.Data.MySqlClient;
 
 namespace SimpleProject.Controllers
 {
@@ -63,9 +64,26 @@ namespace SimpleProject.Controllers
         IValueCalculator calc = ninjectKernel.Get<IValueCalculator>();
         ShoppingCart cart = new ShoppingCart(calc) { Products = products };
         decimal totalValue = cart.CalculateProductTotal();
-        ViewBag.TotalValue = totalValue.ToString();        
+        ViewBag.TotalValue = totalValue.ToString();
 
-        return View(totalValue);
+            string connectionString = "Data Source=localhost;Initial Catalog=gamestore;User ID=root;Password=mysql";
+            MySqlConnection cnn = new MySqlConnection(connectionString);
+            try
+            {
+                cnn.Open();
+                ViewBag.Connect = "Connection Open !";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Connect = "Can not open connection!";
+                ViewBag.Connect = ex.Message; //shows what error actually occurs
+            }
+            finally
+            {
+                cnn.Close();
+            }
+
+            return View(totalValue);
     }
 
 

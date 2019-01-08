@@ -62,9 +62,6 @@
     <Reference Include="Build.Mvc5">
       <HintPath>..\packages\Build.Mvc5.2014.5.26.0\lib\net45\Build.Mvc5.dll</HintPath>
     </Reference>
-    <Reference Include="MySql.Data">
-      <HintPath>..\packages\MySql.Data.6.7.9\lib\net45\MySql.Data.dll</HintPath>
-    </Reference>
     <Reference Include="Iesi.Collections">
       <HintPath>..\packages\Iesi.Collections.4.0.0.4000\lib\net40\Iesi.Collections.dll</HintPath>
     </Reference>
@@ -87,6 +84,10 @@
       <HintPath>..\packages\Moq.4.1.1309.1617\lib\net40\Moq.dll</HintPath>
     </Reference>
     <Reference Include="System.Web.Http" />
+    <Reference Include="MySql.Data">
+      <HintPath>..\packages\MySql.Data.6.9.12\lib\net45\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\" />
@@ -142,6 +143,7 @@
     <Content Include="Views\Home\RsvpForm.cshtml" />
     <Content Include="Views\Home\Thanks.cshtml" />
     <Content Include="Content\Site.css" />
+    <Content Include="db.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\README.md" />
