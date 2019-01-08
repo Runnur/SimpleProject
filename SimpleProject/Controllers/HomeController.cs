@@ -66,7 +66,7 @@ namespace SimpleProject.Controllers
         decimal totalValue = cart.CalculateProductTotal();
         ViewBag.TotalValue = totalValue.ToString();
 
-            string connectionString = "Data Source=localhost;Initial Catalog=gamestore;User ID=root;Password=mysql";
+            string connectionString = "";
             MySqlConnection cnn = new MySqlConnection(connectionString);
             try
             {
