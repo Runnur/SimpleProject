@@ -20,9 +20,13 @@ namespace SimpleProject.Controllers
             new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
             new Product {Name = "Soccer ball", Category = "Soccer", Price = 17.95M},
             new Product {Name = "Corner flag", Category = "Soccer", Price = 34.95M},
-                                     };
+        };
 
-
+        private IValueCalculator calc;
+        public HomeController(IValueCalculator calcParam)
+        {
+            calc = calcParam;
+        }
 	//Строк 1.3 созданная в ветке MyLocalBranch
 	//Строк 1.4 созданная в ветке MyLocalBranch
 
@@ -61,7 +65,7 @@ namespace SimpleProject.Controllers
         decimal totalValue = cart.CalculateProductTotal();
         ViewBag.TotalValue = totalValue.ToString();        
 
-        return View();
+        return View(totalValue);
     }
 
 

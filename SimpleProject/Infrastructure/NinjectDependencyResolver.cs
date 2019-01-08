@@ -5,7 +5,7 @@ using Ninject;
 using Ninject.Parameters;
 using Ninject.Syntax;
 using System.Configuration;
-
+using SimpleProject.Models;
 
 namespace SimpleProject.Infrastructure
 {
