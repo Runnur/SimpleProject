@@ -39,6 +39,7 @@ namespace SimpleProject.Infrastructure
         {
             //Mock<IGame
             kernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
+            kernel.Bind<IDiscountHelper>().To<DefaultDiscountHelper>();
         }
     }
 }

@@ -109,6 +109,7 @@
     <Compile Include="Infrastructure\NinjectDependencyResolver.cs" />
     <Compile Include="Models\IValueCalculator.cs" />
     <Compile Include="Models\ILinqValueCalculator.cs" />
+    <Compile Include="Models\Discount.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
