@@ -110,6 +110,7 @@
     <Compile Include="Models\IValueCalculator.cs" />
     <Compile Include="Models\ILinqValueCalculator.cs" />
     <Compile Include="Models\Discount.cs" />
+    <Compile Include="Models\FlexibleDiscountHelper.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
