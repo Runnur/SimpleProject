@@ -16,7 +16,7 @@ namespace SimpleProject.Models
         }
         public decimal ApplyDiscount(decimal totalParam)
         {
-            return (totalParam - (discountSize / 100m * totalParam));
+            return (totalParam - (10m / 100m * totalParam));
         }
     }
 }

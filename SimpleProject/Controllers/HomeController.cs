@@ -28,24 +28,30 @@ namespace SimpleProject.Controllers
         {
             calc = calcParam;
         }
-	//Строк 1.3 созданная в ветке MyLocalBranch
-	//Строк 1.4 созданная в ветке MyLocalBranch
+        public HomeController()
+        {
 
-	//Строка 1.5 созданная в ветке master
-	//Строка 1.6 созданная в ветке MyLocalBranch
-	//Строка 1.7 созданная в ветке master
-	//Строка 1.8 созданная в ветке MyLocalBranch
-	//Строка 1.9 созданная в ветке master
-	//Строка 1.10 созданная в ветке master
-	//Строка 1.11 созданная в ветке MyLocalBranch
-	//Строка 1.12 созданная в ветке master
-	//Строка 1.13 созданная в ветке MyLocalBranch
-	//Строка 1.14 созданная в ветке master
-	//Строка 1.15 созданная в ветке LocalMasterBranch
+        }
+        //Строк 1.3 созданная в ветке MyLocalBranch
+        //Строк 1.4 созданная в ветке MyLocalBranch
 
-    //Строка 1.16 созданная в ветке master
+        //Строка 1.5 созданная в ветке master
+        //Строка 1.6 созданная в ветке MyLocalBranch
+        //Строка 1.7 созданная в ветке master
+        //Строка 1.8 созданная в ветке MyLocalBranch
+        //Строка 1.9 созданная в ветке master
+        //Строка 1.10 созданная в ветке master
+        //Строка 1.11 созданная в ветке MyLocalBranch
+        //Строка 1.12 созданная в ветке master
+        //Строка 1.13 созданная в ветке MyLocalBranch
+        //Строка 1.14 созданная в ветке master
+        //Строка 1.15 созданная в ветке LocalMasterBranch
 
-    //Строка 1.17 созданная в ветке LocalMasterBranch
+        //Строка 1.16 созданная в ветке master
+
+        //Строка 1.17 созданная в ветке LocalMasterBranch
+
+        private MobileContext db = new MobileContext();
 
     public ActionResult Index()
     {
@@ -61,7 +67,7 @@ namespace SimpleProject.Controllers
 
         IKernel ninjectKernel = new StandardKernel();
         ninjectKernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
-        IValueCalculator calc = ninjectKernel.Get<IValueCalculator>();
+        //IValueCalculator calc = ninjectKernel.Get<IValueCalculator>();
         ShoppingCart cart = new ShoppingCart(calc) { Products = products };
         decimal totalValue = cart.CalculateProductTotal();
         ViewBag.TotalValue = totalValue.ToString();
@@ -82,6 +88,8 @@ namespace SimpleProject.Controllers
             {
                 cnn.Close();
             }
+
+            ViewBag.Phones = db.Phones.ToList();
 
             return View(totalValue);
     }
