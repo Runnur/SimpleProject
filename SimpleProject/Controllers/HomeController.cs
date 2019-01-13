@@ -7,6 +7,7 @@ using System.Web.Mvc.Ajax;
 using System.Web.Mvc.Html;
 using SimpleProject.Models;
 using Ninject;
+using MySql.Data.MySqlClient;
 
 namespace SimpleProject.Controllers
 {
@@ -42,11 +43,10 @@ namespace SimpleProject.Controllers
 
     //Строка 1.16 созданная в ветке master
 
-    //Строка 1.17 созданная в ветке LocalMasterBranch
+        private MobileContext db = new MobileContext();
 
     public ActionResult Index()
     {
-
 
         var mvcName = typeof(Controller).Assembly.GetName();
         var isMono = Type.GetType("Mono.Runtime") != null;
@@ -57,15 +57,33 @@ namespace SimpleProject.Controllers
         int hour = DateTime.Now.Hour;
         ViewBag.Greeting = hour < 12 ? "Good Morning" : "Good Afternoon";
 
-        IKernel ninjectKernel = new StandartKernel();
+        IKernel ninjectKernel = new StandardKernel();
         ninjectKernel.Bind<IValueCalculator>().To<LinqValueCalculator>();
-        IValueCalculator calc = ninjectKernel.Get<IValueCalculator>();
-        //ILinqValueCalculator calc = new LinqValueCalculator();
+        //IValueCalculator calc = ninjectKernel.Get<IValueCalculator>();
         ShoppingCart cart = new ShoppingCart(calc) { Products = products };
         decimal totalValue = cart.CalculateProductTotal();
-        ViewBag.TotalValue = totalValue.ToString();        
+        ViewBag.TotalValue = totalValue.ToString();
 
-        return View();
+            string connectionString = "";
+            MySqlConnection cnn = new MySqlConnection(connectionString);
+            try
+            {
+                cnn.Open();
+                ViewBag.Connect = "Connection Open !";
+            }
+            catch (Exception ex)
+            {
+                ViewBag.Connect = "Can not open connection!";
+                ViewBag.Connect = ex.Message; //shows what error actually occurs
+            }
+            finally
+            {
+                cnn.Close();
+            }
+
+            ViewBag.Phones = db.Phones.ToList();
+
+            return View(totalValue);
     }
 
 
@@ -74,7 +92,7 @@ namespace SimpleProject.Controllers
     {
         return View();
     }
-	
+
 	[HttpGet]
 	public string TestMethod()
 	{

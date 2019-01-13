@@ -1,6 +1,8 @@
 ﻿using System.Web;
 using System.Web.Mvc;
+using System.Web.Http;
 using System.Web.Routing;
+using SimpleProject.Infrastructure;
 
 namespace SimpleProject
 {
@@ -9,6 +11,7 @@ namespace SimpleProject
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
+            DependencyResolver.SetResolver(new NinjectDependencyResolver());
             RouteConfig.RegisterRoutes(RouteTable.Routes);
         }
     }

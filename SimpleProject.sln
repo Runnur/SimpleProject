@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleProject", "SimpleProject\SimpleProject.csproj", "{92F26DE0-C09C-412A-9CF0-3897EC84626C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameStore.Domain", "GameStore.Domain\GameStore.Domain.csproj", "{B98514EE-B6E4-49AA-A6FE-4BB598F323E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,16 @@ Global
 		{92F26DE0-C09C-412A-9CF0-3897EC84626C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{92F26DE0-C09C-412A-9CF0-3897EC84626C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{92F26DE0-C09C-412A-9CF0-3897EC84626C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B98514EE-B6E4-49AA-A6FE-4BB598F323E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B98514EE-B6E4-49AA-A6FE-4BB598F323E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B98514EE-B6E4-49AA-A6FE-4BB598F323E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B98514EE-B6E4-49AA-A6FE-4BB598F323E7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.StandardHeader = $2
+		$0.VersionControlPolicy = $3
 	EndGlobalSection
 EndGlobal

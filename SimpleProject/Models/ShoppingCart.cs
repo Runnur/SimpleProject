@@ -1,18 +1,20 @@
+﻿using System;
 using System.Collections.Generic;
 
 namespace SimpleProject.Models
 {
-    public class ShoppingCart	
+    public class ShoppingCart
     {
-        private ILinqValueCalculator calc;
+        private IValueCalculator calc;
 
-	
-        public ShoppingCart(ILinqValueCalculator calcParam)
+
+        public ShoppingCart(IValueCalculator calcParam)
         {
             calc = calcParam;
         }
 
         public IEnumerable<Product> Products { get; set; }
+
         public decimal CalculateProductTotal()
         {
             return calc.ValueProducts(Products);
