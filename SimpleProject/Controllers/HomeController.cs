@@ -13,9 +13,9 @@ namespace SimpleProject.Controllers
 {
     public class HomeController : Controller
     {
-     
+
         Product p1 = new Product();
-        
+
         private Product[] products = {
             new Product {Name = "Kayak", Category = "Watersports", Price = 275M},
             new Product {Name = "Lifejacket", Category = "Watersports", Price = 48.95M},
@@ -50,6 +50,7 @@ namespace SimpleProject.Controllers
         //Строка 1.16 созданная в ветке master
 
         //Строка 1.17 созданная в ветке LocalMasterBranch
+        //Строка
 
         private MobileContext db = new MobileContext();
 
@@ -100,7 +101,7 @@ namespace SimpleProject.Controllers
     {
         return View();
     }
-	
+
 	[HttpGet]
 	public string TestMethod()
 	{
